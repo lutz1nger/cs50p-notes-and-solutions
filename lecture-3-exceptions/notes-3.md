@@ -187,4 +187,4 @@ if x < 0:
   
     1\. set an breakpoint in a code line (red dot on the left side of code line number)  
     2\. start the debugger  
-    3. at the breakpoint the code is stopped and then you examine the every code line with the functions 'continue' (go to the next breakpoint), 'step over' (go to the next code line), 'step into' (go into the function), and 'step out' (leave a function)
+    3. at the breakpoint the code is stopped and then you examine the every code line with the functions "continue" (go to the next breakpoint), "step over" (go to the next code line), "step into" (go into the function), and "step out" (leave a function)

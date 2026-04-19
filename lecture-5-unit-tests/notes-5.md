@@ -258,7 +258,7 @@ if __name__ == "__main__":
 ### ORGANIZING TESTS INTO FOLDERS
 + in unit testing, multiple test programs are common
 + therefore, all test programs are placed in the folder test (common convention), e.g.
-```bash
+```
 ├── test
 │   ├── __init__.py
 │   ├── test_file_1.py

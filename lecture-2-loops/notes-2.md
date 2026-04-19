@@ -15,7 +15,7 @@ while condition:
 ```python
 i = 0
 while i < 3:
-    print('meow')
+    print("meow")
     i += 1
 ```
 + in general, counting starts at 0 in programming
@@ -24,7 +24,7 @@ while i < 3:
 +  a common paradigm within python is to use a while loop to validate the input of the user
 ```python
 while True:
-    n = int(input('What\'s n? '))
+    n = int(input("What's n? "))
     if n < 0:
         continue
     else:
@@ -41,14 +41,14 @@ def main():
 
 def get_number():
     while True:
-        n = int(input('What\'s n? '))
+        n = int(input("What's n? "))
         if n > 0:
             return n
 
 
 def meow(n):
     for _ in range(n):
-        print('meow')
+        print("meow")
 
 
 main()
@@ -62,20 +62,20 @@ for i in list:
 + e.g.
 ```python
 for i in [0, 1, 2]:
-    print('meow')
+    print("meow")
 ```
 
 ### RANGE FUNCTION
 + range() returns a sequence of numbers starting with 0 (default) with increments of 1 (default), e.g. 
 ```python
 for i in range(3):
-    print('meow')
+    print("meow")
 ```
 + the stop value is exclusive, that means the range() functions counts only to stop-1, e.g. the output for range(3) is 0,1,2
 + if a varibale has no significance in a code, a variable is represented by a underscore(_) -> it is more pythonic, e.g.
 ```python
 for _ in range(3):
-    print('meow')
+    print("meow")
 ```
 
 ### LIST
@@ -147,32 +147,26 @@ len(numbers) #output: 6
 + a key and an assigned value is a item, they are seperated by :
 + dict is represented by {}, items are seperarted by , in a dict
 ```python
-numbers = {'one': 1, 'two': 2, 'three': 3}
+numbers = {"one": 1, "two": 2, "three": 3}
 ```
 + for nice coding every item gets a seperate line:
 ```python
 numbers = {
-    'one': 1,
-    'two': 2,
-    'three': 3
+    "one": 1,
+    "two": 2,
+    "three": 3
 }
 ```
 + according to PEP 8, the last item ends with a comma as well (technically the last comma is not necessary):
 ```python
 numbers = {
-    'one': 1,
-    'two': 2,
-    'three': 3,
+    "one": 1,
+    "two": 2,
+    "three": 3,
 }
 ```
 + the value is returned by the key:
 ```python
-numbers = {
-    'one': 1,
-    'two': 2,
-    'three': 3
-}
-
 numbers['one'] #output: 1 
 ```
 + a keyerror indicates the absence of key and assigned value
@@ -194,10 +188,10 @@ numbers['one'] #output: 1
 + list and dict can be combined to structure data, e.g.
 ```python
 students = [
-    {'name': 'Hermione', 'house': 'Gryffindor', 'patronus': 'Otter'},
-    {'name': 'Harry', 'house': 'Gryffindor', 'patronus': 'Stag'},
-    {'name': 'Ron', 'house': 'Gryffindor', 'patronus': 'Jack Russell terrier'},
-    {'name': 'Draco', 'house': 'Slytherin', 'patronus': None},
+    {"name": "Hermione", "house": "Gryffindor", "patronus": "Otter"},
+    {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"},
+    {"name": "Ron", "house": "Gryffindor", "patronus": "Jack Russell terrier"},
+    {"name": "Draco", "house": "Slytherin", "patronus": None},
 ]
 ``` 
 
@@ -207,7 +201,7 @@ students = [
 ### STRING SLICING 
 + analouge to list slicing
 ```python
-string = 'python'
+string = "python"
 
 string[2] #output: t
 string[1:3] #output: yt
@@ -225,7 +219,7 @@ string[:-4] #output: py
 + a tuple is an **immutable** variable contaning mulitple items 
 + a tuple is represented by (), items are seperarted by , in a tuple
 + tuples have a smaller size compared to lists -> higher performance
-+ tuple unpacking:
++ tuple can be unpacked:
 ```python
 x,y = (i, j)
 

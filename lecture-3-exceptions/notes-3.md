@@ -28,56 +28,56 @@ print('hello world) # output: SyntaxError: unterminated string literal
 + try and except are keywords, check if an error occurs and therefore, the code is not interrupted, e.g.
 ```python
 try:
-    x = int(input("What's x?")) # output when no error occurs
-    print(f"x is {x}") # output when no error occurs
+    x = int(input('What\'s x?')) # output when no error occurs
+    print(f'x is {x}') # output when no error occurs
 except ValueError:
-    print("x is not an integer") # output when an error occurs
+    print('x is not an integer') # output when an error occurs
 ```
 + for the keyword statement, the errors should be known and you must be specific with the exceptions; for multiple error types multiple excepts are necessary
 + for best practice, only the lines, which can fail, should be used in the try statement (it is more pythonic), e.g.
 ```python
 try:
-    x = int(input("What's x?")) # only this line can fail
+    x = int(input('What\'s x?')) # only this line can fail
 except ValueError:
-    print("x is not an integer")
+    print('x is not an integer')
 
-print(f"x is {x}")
+print(f'x is {x}')
 ```
 +  however, in this example we will get an NameError, when no integer is in the input resulting that x is not assigned due to a ValueError
 +  therefore, the try and except statements can be combined with the else statement, e.g.
 ```python
 try:
-    x = int(input("What's x?"))
+    x = int(input('What\'s x?'))
 except ValueError:
-    print("x is not an integer")
+    print('x is not an integer')
 else:
-    print(f"x is {x}")
+    print(f'x is {x}')
 ```
 + Improving the code with a while True loop:
 ```python
 while True:
     try:
-        x = int(input("What's x?"))
+        x = int(input('What\'s x?'))
     except ValueError:
-        print("x is not an integer")
+        print('x is not an integer')
     else:
         break
 
-print(f"x is {x}")
+print(f'x is {x}')
 ```
 + instead of break, return can be used
 ```python
 def main():
     x = get_int()
-    print(f"x is {x}")
+    print(f'x is {x}')
 
 
 def get_int():
     while True:
         try:
-            x = int(input("What's x?"))
+            x = int(input('What\'s x?'))
         except ValueError:
-            print("x is not an integer")
+            print('x is not an integer')
         else:
             break
     return x
@@ -89,15 +89,15 @@ main()
 ```python
 def main():
     x = get_int()
-    print(f"x is {x}")
+    print(f'x is {x}')
 
 
 def get_int():
     while True:
         try:
-            x = int(input("What's x?"))
+            x = int(input('What\'s x?'))
         except ValueError:
-            print("x is not an integer")
+            print('x is not an integer')
         else:
             return x
 
@@ -109,15 +109,15 @@ main()
 ```python
 def main():
     x = get_int()
-    print(f"x is {x}")
+    print(f'x is {x}')
 
 
 def get_int():
     while True:
         try:
-            return int(input("What's x?"))
+            return int(input('What\'s x?'))
         except ValueError:
-            print("x is not an integer")
+            print('x is not an integer')
 
 
 main()
@@ -128,13 +128,13 @@ main()
 ```python
 def main():
     x = get_int()
-    print(f"x is {x}")
+    print(f'x is {x}')
 
 
 def get_int():
     while True:
         try:
-            return int(input("What's x?"))
+            return int(input('What\'s x?'))
         except ValueError:
             pass # output is nothing
 
@@ -144,8 +144,8 @@ main()
 + for a more reusable and dynamic code, the prompt is insert in the main(); therefore, get_int() can be used in other codes/programms
 ```python
 def main():
-    x = get_int("What's x? ")
-    print(f"x is {x}")
+    x = get_int('What\'s x? ')
+    print(f'x is {x}')
 
 
 def get_int(prompt):

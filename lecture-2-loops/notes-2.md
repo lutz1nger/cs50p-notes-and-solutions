@@ -86,16 +86,16 @@ numbers = [0,1,2,3,4,5]
 ```
 + the first item has the index 0, the second item has the index 1, and so on
 + the last item has the index -1, the second last item has the index -2. and so on
-+ list slicing with the syntax list [start : end : step]
++ list slicing with the syntax list \[start : end : step]
 + start, end, and step are optional
 
 | | description |
 | --- | --- |
-| list[i] | returns the item with the index i |
-| list[i:j] | returns the items from index i (i is inclusive) to index j (j is exclusive) |
-| list[i:] | returns items from index i (i is inclusive) to the end of the list |
-| list[:i] | returns items from the start of the list to index i (i is exlusive);  same as list[0:i] |
-| list[::-1] | returns reversed list |
+| list\[i] | returns the item with the index i |
+| list\[i:j] | returns the items from index i (i is inclusive) to index j (j is exclusive) |
+| list\[i:] | returns items from index i (i is inclusive) to the end of the list |
+| list\[:i] | returns items from the start of the list to index i (i is exlusive);  same as list\[0:i] |
+| list\[::-1] | returns reversed list |
 + e.g.
 ```python
 numbers = [0,1,2,3,4,5]

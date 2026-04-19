@@ -24,7 +24,7 @@
 import random
 ```
 + then all functions of the library are loaded
-+ the built-in function can be called by <library \name>.function(), e.g.
++ the built-in function can be called by \<library name>.function(), e.g.
 ```python
 import random
 
@@ -41,7 +41,7 @@ print(coin)
 + it can increase readabilty of a code; however, watch out for shadowing (occurs when a variable defined within a local scope (like a function) has the same name as a variable in an outer scope, , making the outer variable inaccessible within that local context)
 
 ### STATISTICS
-+ library/module for statistical calculations, e.g. for the calcualtion of a mean value
++ library/module for statistical calculations, e.g. for the calculation of a mean value
 ```python
 import statistics
 
@@ -58,7 +58,7 @@ print("hello, my name is", sys.argv[1])
 ```
 + by entering 'python name.py David' the programm is executed
 + sys.argv (argument vector) is a list within sys that stores command-line arguments passed to a programm
-+ the first element of sys.argv(sys.argv[0]) is always the name of the programm
++ the first element of sys.argv(sys.argv\[0]) is always the name of the programm
 + a to low or high amount of arguments results in a IndexError; therefore, the input must be checked for errors:
 ```python
 import sys
@@ -94,7 +94,7 @@ for arg in sys.argv[1:]:
 ### PACKAGES
 + third-party libraries implemented as a folder
 + [PyPI](https://pypi.org/) (Python Package Index) is a repository or directory of all available third-party packages currently available
-+ packages can be installed by the package manager pip; therefore, pip install <libraries> is entered in the terminal
++ packages can be installed by the package manager pip; therefore, pip install \<library> is entered in the terminal
 + then the package can be loaded by the keyword import, e.g. cowsay (program that generates ASCII art pictures of animals with a message)
 ```python
 import cowsay
@@ -160,7 +160,7 @@ o = response.json()
 for result in o["results"]:
     print(result["trackName"])
 ```
-+ the code can be optimized by the function) response.raise_for_status() from the requests library (connection check; HTTP status code 200 means the connection is ok) and the error requests.HTTPError (connection failed):
++ the code can be optimized by the function response.raise_for_status() from the requests library (connection check; HTTP status code 200 means the connection is ok) and the error requests.HTTPError (connection failed):
 ```python
 import json
 import requests
@@ -173,7 +173,7 @@ try:
     response = requests.get("https://itunes.apple.com/search?entity=song&limit=50&term=" + sys.argv[1])
     response.raise_for_status()
 except requests.HTTPError:
-    print(''Connection failed!)
+    print("Connection failed!")
    
 o = response.json()
 for result in o["results"]:
@@ -209,8 +209,8 @@ if len(sys.argv) == 2:
 + for e.g. debugging, in the library a main function can be added, e.g.
 ```python
 def main():
-    hello('world')
-    goodbye('world')
+    hello("world")
+    goodbye("world")
 
 def hello(name):
     print(f"hello, {name}")
@@ -218,18 +218,18 @@ def hello(name):
 def goodbye(name):
     print(f"goodbye, {name}")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 ```
-+ description of if \_\_name\_\_ == '\_\_main\_\_': main():
++ description of if \_\_name\_\_ == "\_\_main\_\_": main():
     + every python file has a variable called \_\_name\_\_
-    + if the python file is executed, \_\_name\_\_ is assigned as '\_\_main\_\_' (the main() is executed)
-    + if the python file is imported as library in another python file, \_\_name\_\_ is assigned as <python file name\> (the main() is not executed)
-    + e.g. the python file 'file1.py' is executed, then  \_\_name\_\_ is '\_\_main\_\_'; the python file 'file1.py' is imported in another python file, then  \_\_name\_\_ is 'file1'
+    + if the python file is executed, \_\_name\_\_ is assigned as "\_\_main\_\_" (the main() is executed)
+    + if the python file is imported as library in another python file, \_\_name\_\_ is assigned as \<python file name> (the main() is not executed)
+    + e.g. the python file "file1.py" is executed, then  \_\_name\_\_ is "\_\_main\_\_"; the python file "file1.py" is imported in another python file, then  \_\_name\_\_ is "file1"
 
 ### MAKING OWN PACKAGE
 + a own package can be made by placing files in the folder
-+ additionally, a file with the name '\_\_init\_\_.py' must be added in the folder
++ additionally, a file with the name "\_\_init\_\_.py" must be added in the folder
 + the folder must be in the same folder as the python file using the package or  must be registered in PYTHONPATH
 + e.g.
 ```bash
@@ -256,4 +256,4 @@ function1()
 + following libraries can help to clean up the code regarding PEP 8 (all can be installed using pip):
     + [Pylint](https://pypi.org/project/pylint/)
     + [pycodestyle](https://pypi.org/project/pycodestyle/)
-    + [black](https://pypi.org/project/black/) -> for exceution in the terminal: black <python file name\>.py
+    + [black](https://pypi.org/project/black/) -> for exceution in the terminal: black \<python file name>.py

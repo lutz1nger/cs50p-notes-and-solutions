@@ -182,7 +182,7 @@ if x < 0:
 
 ### DEBUGGING
 + for the idendification of bugs, the most interpreter/editior have a build-in debugger
-+ in VS Code it is called 'run and debug' (symbol with play button and bug)
++ in VS Code it is called "run and debug" (symbol with play button and bug)
 + for debugging:
   
     1\. set an breakpoint in a code line (red dot on the left side of code line number)  

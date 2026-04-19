@@ -95,7 +95,7 @@ float = f"{z:.2f}" #variable z is separated by a decimal point and has two decim
 ### DEF
 + own function can be created with the def function:
 ```python
-def squared(x): #a function 'squared' is defined with the parameter x
+def squared(x): #a function "squared" is defined with the parameter x
   y = x*x #side effect, but this values are not returned by the function
   return y #RETURN VALUE
 ```         
@@ -104,7 +104,7 @@ def squared(x): #a function 'squared' is defined with the parameter x
 + in general, parameters are only valid in the SCOPE of the def function.
 + value returned by the function is called **RETURN VALUE**
 + the RETURN VALUE is optional
-+ global variables can be changed inside a def function by use of the prefix 'global', e.g.:
++ global variables can be changed inside a def function by use of the prefix "global", e.g.:
 ```python
 x = 2
 def multiple(y):
@@ -128,14 +128,14 @@ main() #main code is executed
 ### COMMANDS IN THE TERMINAL
 | commands | description |
 | --- | --- |
-| code <file.py> | create new code file<file.py> |
+| code \<file.py> | create new code file\<file.py> |
 | ls | list of all files in the current directory |
-| cp <file> <dir> | copy file <file> into the directroy <dir> |
-| mv <file> <dir> | move file <file> into the directroy <dir> |
-| rm <file> | delete file <file> |
-| mkdir <dir> | create new directory <dir> |
+| cp \<file> \<dir> | copy file \<file> into the directroy \<dir> |
+| mv <file> \<dir> | move file <file> into the directroy \<dir> |
+| rm \<file> | delete file \<file> |
+| mkdir \<dir> | create new directory \<dir> |
 | cd | change to root directory |
 | cd .. | change to directory one level of the directory tree up |
-| cd <dir> | change to directory <dir> |
-| rmdir <dir> | delete directory <dir> |
+| cd \<dir> | change to directory \<dir> |
+| rmdir \<dir> | delete directory \<dir> |
 | clear | clear terminal|

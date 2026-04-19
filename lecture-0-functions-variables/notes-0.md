@@ -4,14 +4,14 @@
 + original notes: [course site](https://cs50.harvard.edu/python/notes/0/)
 
 ### COMMENTS
-+ inside a code comments can be made using '#' for e.g. documentation or to-dos
++ inside a code comments can be made using "#" for e.g. documentation or to-dos
 
 ### FUNCTIONS
 + commands performing actions - called **SIDE EFFECTS**; e.g. print()
 ```python
 print() #prints input on the screen or display
-print('hello' + 'world') #output: helloworld
-print('hello', 'world') #output: hello world
+print("hello" + "world") #output: helloworld
+print("hello", "world") #output: hello world
 ```
 + inside parantheses is the input - called **ARGUMENTS**
 
@@ -25,38 +25,38 @@ print(*objects, sep=' ', end='\n', file=None, flush=False)
 + objects, sep, end, ... are called **PARAMETERS** -> difference arguments and parameters: parameters are defined in the function definition and arguments are values being passed to the function
 
 ### VARIABLES
-+ values can be assigned using '=', e.g.
++ values can be assigned using "=", e.g.
 ```python
-name = 'David'
+name = "David"
 ```
 + multiple values can be assigned in one line, e.g.
 ```python
-name = 'David Malan'              
-first_name, last_name = name.split(' ') #output: first_name is 'David' and last_name is 'Malan'
+name = "David Malan"              
+first_name, last_name = name.split(" ") #output: first_name is "David" and last_name is "Malan"
 ```
 
 ### STR
 + string variable -> text
 + string variables are in either single (') or double quotation marks ("), e.g.
 ```python
+name = "David Malan"
+
 name = 'David Malan'
-              
-name = "David Malan" 
 ```
 + for consistency use only one type of quotation marks in the code
 + triple quotation marks (''' or """) are used for multi-line strings including line break, e.g.
 ```python
-text = '''first line,
-second line,
-third line'''
-
 text = """first line,
 second line,
 third line"""
+
+text = '''first line,
+second line,
+third line'''
 ```
-+ to use a quotation mark in a string, Escaping must be used by backslash (\), e.g.
++ to use a quotation marks in a string, Escaping must can be used by backslash (\), e.g.
 ```python
-name = 'David\'s lastname is Malan' #output: David's lastname is Malan
+name = "\"David\"" #output: "David"
 ```
 + str can be modifided by **STRING-METHODS**, e.g.
 ```python
@@ -70,7 +70,7 @@ str.strip().title() #whitspaces from the left and right of the variable are remo
 ### F STRING
 + formatting string, e.g.
 ```python
-f_string = f'hello, {name}' #the f indidactes it is a f string and therefore, the variable name is used in this string
+f_string = f"hello, {name}" #the f indidactes it is a f string and therefore, the variable name is used in this string
 ```
 
 ### INT
@@ -80,16 +80,16 @@ f_string = f'hello, {name}' #the f indidactes it is a f string and therefore, th
 
 ### FLOAT
 + float variable -> floating-point number
-+ for very small or large numbers the scientific notation (1e<number>) can be used, e.g.
++ for very small or large numbers the scientific notation (1e\<number>) can be used, e.g.
 ```python
 number1 = 1e5 #output: 100000
 number2 = 1e-5 #output: 0.00001
 ```
 + function float() can be used to convert variable into float variable
-+ float can be rounded by the function round() -> documentation: round(number[, ndigits]) -> in documentations [] means the argument is optional
++ float can be rounded by the function round() -> documentation: round(number\[, ndigits]) -> in documentations [] means the argument is optional
 + f string for float:
 ```python
-float = f'{z:.2f}' #variable z is separated by a decimal point and has two decimal places
+float = f"{z:.2f}" #variable z is separated by a decimal point and has two decimal places
 ```
 
 ### DEF

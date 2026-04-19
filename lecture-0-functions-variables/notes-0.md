@@ -39,7 +39,8 @@ first_name, last_name = name.split(' ') #output: first_name is 'David' and last_
 + string variable -> text
 + string variables are in either single (') or double quotation marks ("), e.g.
 ```python
-name = 'David Malan'              
+name = 'David Malan'
+              
 name = "David Malan" 
 ```
 + for consistency use only one type of quotation marks in the code
@@ -48,6 +49,7 @@ name = "David Malan"
 text = '''first line,
 second line,
 third line'''
+
 text = """first line,
 second line,
 third line"""

@@ -11,7 +11,7 @@
 ```python
 print() #prints input on the screen or display
 print('hello' + 'world') #output: helloworld
-print('hello', 'world') #output: hello world
+print('hello', "world') #output: hello world
 ```
 + inside parantheses is the input - called **ARGUMENTS**
 
@@ -37,6 +37,22 @@ first_name, last_name = name.split(' ') #output: first_name is 'David' and last_
 
 ### STR
 + string variable -> text
++ string variables are in either single (') or double quotation marks ("), e.g.
+```python
+name = 'David Malan'              
+name = "David Malan" 
+```
++ for consistency use only one type of quotation marks in the code
++ triple quotation marks (''' or """) are used for multi-line strings including line break, e.g.
+```python
+text = '''first line,
+second line,
+third line'''
+```
++ to use a quotation mark in a string, Escaping must be used by backslash (\), e.g.
+```python
+name = 'David\'s lastname is Malan' #output: David's lastname is Malan
+```
 + str can be modifided by **STRING-METHODS**, e.g.
 ```python
 str.strip() #whitspaces from the left and right of the variable are removed
@@ -59,6 +75,11 @@ f_string = f'hello, {name}' #the f indidactes it is a f string and therefore, th
 
 ### FLOAT
 + float variable -> floating-point number
++ for very small or large numbers the scientific notation (1e<number>) can be used, e.g.
+```python
+number1 = 1e5 #output: 100000
+number2 = 1e-5 #output: 0.00001
+```
 + function float() can be used to convert variable into float variable
 + float can be rounded by the function round() -> documentation: round(number[, ndigits]) -> in documentations [] means the argument is optional
 + f string for float:

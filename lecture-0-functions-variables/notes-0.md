@@ -48,6 +48,9 @@ name = "David Malan"
 text = '''first line,
 second line,
 third line'''
+text = """first line,
+second line,
+third line"""
 ```
 + to use a quotation mark in a string, Escaping must be used by backslash (\), e.g.
 ```python

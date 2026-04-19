@@ -232,7 +232,7 @@ if __name__ == "__main__":
 + additionally, a file with the name "\_\_init\_\_.py" must be added in the folder
 + the folder must be in the same folder as the python file using the package or  must be registered in PYTHONPATH
 + e.g.
-```bash
+```
 ├── dir
 │   ├── __init__.py
 │   ├── file1.py

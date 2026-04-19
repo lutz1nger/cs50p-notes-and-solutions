@@ -11,7 +11,7 @@
 ```python
 print() #prints input on the screen or display
 print('hello' + 'world') #output: helloworld
-print('hello', "world') #output: hello world
+print('hello', 'world') #output: hello world
 ```
 + inside parantheses is the input - called **ARGUMENTS**
 

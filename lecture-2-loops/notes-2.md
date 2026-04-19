@@ -167,7 +167,7 @@ numbers = {
 ```
 + the value is returned by the key:
 ```python
-numbers['one'] #output: 1 
+numbers["one"] #output: 1 
 ```
 + a keyerror indicates the absence of key and assigned value
 + dict methods

@@ -8,7 +8,7 @@
 + always read the documentation of a library
 
 ### RANDOM
-+ library/module to generate randomness contaning e.g. following functions
++ library/module to generate randomness containing e.g. following functions
 
 | function | description |
 | --- | --- |
@@ -38,7 +38,7 @@ from random import choice
 coin = choice(["heads", "tails"])
 print(coin)
 ```
-+ it can increase readabilty of a code; however, watch out for shadowing (occurs when a variable defined within a local scope (like a function) has the same name as a variable in an outer scope, , making the outer variable inaccessible within that local context)
++ it can increase readabilty of a code; however, watch out for shadowing (occurs when a variable defined within a local scope (like a function) has the same name as a variable in an outer scope, making the outer variable inaccessible within that local context)
 
 ### STATISTICS
 + library/module for statistical calculations, e.g. for the calculation of a mean value
@@ -56,8 +56,8 @@ import sys
 
 print("hello, my name is", sys.argv[1])
 ```
-+ by entering 'python name.py David' the programm is executed
-+ sys.argv (argument vector) is a list within sys that stores command-line arguments passed to a programm
++ by entering "python name.py David" the programm is executed
++ sys.argv (argument vector) is a list within sys that stores command-line arguments passed to the program
 + the first element of sys.argv(sys.argv\[0]) is always the name of the programm
 + a to low or high amount of arguments results in a IndexError; therefore, the input must be checked for errors:
 ```python
@@ -93,7 +93,7 @@ for arg in sys.argv[1:]:
 
 ### PACKAGES
 + third-party libraries implemented as a folder
-+ [PyPI](https://pypi.org/) (Python Package Index) is a repository or directory of all available third-party packages currently available
++ [PyPI](https://pypi.org/) (python package index) is a repository or directory of all available third-party packages currently available
 + packages can be installed by the package manager pip; therefore, pip install \<library> is entered in the terminal
 + then the package can be loaded by the keyword import, e.g. cowsay (program that generates ASCII art pictures of animals with a message)
 ```python
@@ -108,7 +108,7 @@ if len(sys.argv) == 2:
 ```
 
 ### API
-+ application porgramming interface is a set of rules and protocols that acts as an intermediary, allowing different software applications to communicate and exchange data with each other without needing to understand their underlying code
++ application porgramming interface (API) is a set of rules and protocols that acts as an intermediary, allowing different software applications to communicate and exchange data with each other without needing to understand their underlying code
 + always read the documentation of an API
 + to access APIs through the internet like e.g. iTunes, the libraries requests is necessary
 ```python
@@ -145,7 +145,7 @@ if len(sys.argv) != 2:
 response = requests.get("https://itunes.apple.com/search?entity=song&limit=1&term=" + sys.argv[1])
 print(json.dumps(response.json(), indent=2))
 ```
-+ since JSON file are dictionaries, the values can be called, e.g.
++ since JSON file are dictionaries, the values can be called , e.g.
 ```python
 import json
 import requests
@@ -160,7 +160,7 @@ o = response.json()
 for result in o["results"]:
     print(result["trackName"])
 ```
-+ the code can be optimized by the function response.raise_for_status() from the requests library (connection check; HTTP status code 200 means the connection is ok) and the error requests.HTTPError (connection failed):
++ the code can be optimized by the function response.raise_for_status() from the requests library (connection check; HTTP status code 200 means the connection is ok) and the error requests.HTTPError (connection failed), e.g.
 ```python
 import json
 import requests
@@ -181,7 +181,7 @@ for result in o["results"]:
 ```
 
 ### MAKING OWN LIBRARIES
-+ a own library is just a python file with defined functions, e.g. here the python file sayings.py:
++ a own library is just a python file with defined functions, e.g. here the python file sayings.py
 ```python
 def hello(name):
     print(f"hello, {name}")
@@ -189,7 +189,7 @@ def hello(name):
 def goodbye(name):
     print(f"goodbye, {name}")
 ```
-+ to load the own libraries, the keyword import is used:
++ to load the own libraries, the keyword import is used
 ```python
 import sys
 
@@ -205,7 +205,7 @@ from sayings import goodbye
 if len(sys.argv) == 2:
     goodbye(sys.argv[1])
 ```
-+ to load a own libraries, the python files (library and programm) must be in the same folder or the folder with the python file of the library must be registered in PYTHONPATH
++ to load a own libraries, the python files (library and program) must be in the same folder or the folder with the python file of the library must be registered in PYTHONPATH
 + for e.g. debugging, in the library a main function can be added, e.g.
 ```python
 def main():
@@ -223,7 +223,7 @@ if __name__ == "__main__":
 ```
 + description of if \_\_name\_\_ == "\_\_main\_\_": main():
     + every python file has a variable called \_\_name\_\_
-    + if the python file is executed, \_\_name\_\_ is assigned as "\_\_main\_\_" (the main() is executed)
+    + if the python file is executed, \_\_name\_\_ is assigned as "\_\_main\_\_" (the main() is executed for e.g. debugging)
     + if the python file is imported as library in another python file, \_\_name\_\_ is assigned as \<python file name> (the main() is not executed)
     + e.g. the python file "file1.py" is executed, then  \_\_name\_\_ is "\_\_main\_\_"; the python file "file1.py" is imported in another python file, then  \_\_name\_\_ is "file1"
 

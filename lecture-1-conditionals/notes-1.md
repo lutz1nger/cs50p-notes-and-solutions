@@ -37,7 +37,7 @@ y = int2 #y is an integer
 if not x == y: #if not statement compares if x is not equal to y
     print("x not equal to y") #when the if statement is TRUE, the indented block is executed
 ```
-+ for a better control flow the elif statement and else statement can be used, e.g.
++ for a better control flow, the elif statement and else statement can be used, e.g.
 ```python
 x = int1 #x is an integer
 y = int2 #y is an integer
@@ -90,7 +90,7 @@ elif score >=60 and score < 70: #elif statement compares if score is greather th
 else:
     print("Grade: F") #when the elif statement is FALSE, the indented block is executed 
 ```
-+ Python allows to chain conditions and operators, e.g. score >= 90 and score <= 100 -> 90 <= score <= 100
++ python allows to chain conditions and operators, e.g. score >= 90 and score <= 100 -> 90 <= score <= 100
 ```python
 if 90 <= score <= 100: #if statement compares if score is greather than and equal to 90 and score less than and equal to 100
     print("Grade: A") #when the if statement is TRUE, the indented block is executed      
@@ -139,7 +139,7 @@ main()
 ```
 
 ### PYTHONIC
-+ describes writing code that uses the design principles and idiomatic expressions of the Python programming language to make it elegant, readable, concise, and efficient, rather than following patterns from other languages, e.g.
++ describes writing code that uses the design principles and idiomatic expressions of the python programming language to make it elegant, readable, concise, and efficient, rather than following patterns from other languages, e.g.
 ```python
 
 def main():
@@ -164,8 +164,7 @@ def main():
 def is_even(n):
     return n % 2 == 0 #if statement compares if the modulo of n/2 is eual to 0 and return either TRUE or FALSE
 ```
-+ additional information: Python follows the same precedence rules for its mathematical operators that mathematics does. parentheses have the highest precedence and can be used to force an expression to evaluate in the order you want.
-+ Since expressions in parentheses are evaluated first!!!
++ additional information: python follows the same precedence rules for its mathematical operators that mathematics does, parentheses have the highest precedence and can be used to force an expression to evaluate in the order you want -> therefore, expressions in parentheses are evaluated first!!!
 
 ### MATCH
 + match statement compares the value following the match keyword with each of the values following the case keywords

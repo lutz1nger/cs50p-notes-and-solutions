@@ -5,9 +5,9 @@
 
 ### UNIT TESTS
 + it is common to write program to test your program
-+ the tests can not test everything
++ the test programs can not test everything
 + therefore, representative values must be tested with potential corner cases (!!!)
-+ keep the test program nice, simple and small
++ keep the test program nice, simple, and small
 + following the convention, a test program is named test_\<programm name>.py, e.g. for calculator.py the test program is called tets_calculator.py
 ```python
 #calulator.py
@@ -91,14 +91,11 @@ if __name__ == "__main__":
 ```
 
 ### PYTEST
-+ pytest is third party library, which allows to automate unit testing (testing of individual units/functions of your code) 
-+ pytets can be installed by pip: pip install pytets
++ pytest is a third-party library, which allows to automate unit testing (testing of individual units/functions of your code) 
++ pytest can be installed by pip (pip install pytest)
 + for pytest, the test program must be modified (main function removed), e.g.
 ```python
 from calculator import square
-
-def main():
-    test_square()
 
 def test_square():
     assert square(2) == 4
@@ -108,7 +105,7 @@ def test_square():
     assert square(0) == 0
 ```
 + for testing pytest \<test program name>.py is typed in the terminal
-+ then, the test program is tested and a report containuing a clue is returned , e.g.
++ then, the test program is tested and a report containing clues is returned , e.g.
 ```
 =============================================== test session starts ===============================================
 platform
@@ -131,7 +128,7 @@ test_calculator.py:5: AssertionError
 FAILED test_calculator.py::test_square - assert 6 == 9
 ================================================ 1 failed in 0.12s ================================================
 ```
-+ the testing of the function is stopped when an error arises -> after the break, further asserts are not tested, e.g. in the example above after testing square(3), test_square() is stopped and square(-2), square(-3), and square(0) are not tested anymore
++ the testing of the function is stopped when an error arises -> after the break, further asserts are not tested, e.g. in the example above after testing square(3), test_square() is stopped due to an error and square(-2), square(-3), and square(0) are not tested anymore
 + in the line with the test program name either F (test failed) or "." (test passed) is written as brief conclusion
 + in general, representative testing values are splitted in different groups of tests (every test is a function) to get a better overview of the bugs, e.g.
 ```python
@@ -182,7 +179,7 @@ FAILED test_calculator.py::test_negative - assert -4 == 4
 ```
 + when an error arises, testing of the function is stopped (as described above) and the next function is tested
 + in the line with the test program name, the brief conclusion is shown again -> FF. (first function failed, second function failed, third function passed)
-+ instead of assert, the functions pytest.raises with the with statement can be used for expected errors, e.g.
++ instead of assert, the functions pytest.raises() with the with statement can be used for expected errors, e.g.
 ```python
   import pytest
 
@@ -204,8 +201,8 @@ FAILED test_calculator.py::test_negative - assert -4 == 4
           square("cat")
 ```
 + the with statement simplifies resource management by automatically handling setup and cleanup, ensuring files or connections close safely even if errors occur
-+ since float values cannot be represented precise (floating-point precision), there comparison by assert is more challenging
-+ the function pytest.approx(i, abs = j) can help to test floats; comparison of two values within the tolerance abs -> abs(float-i) < abs
++ since float values cannot be represented precise (floating-point precision), their comparison by assert is more challenging
++ the function pytest.approx(i, abs = j) can help to test floats, comparison of two values within the tolerance abs -> abs(float-i) < abs
 ```python
   import pytest
 
@@ -215,7 +212,7 @@ FAILED test_calculator.py::test_negative - assert -4 == 4
       assert square(1.67) == pytest.approx(2.78, abs=0.01)
 
 ```
-+ the tolerance must be determined regarding to the coressponding requirements
++ the tolerance must be determined regarding to the corresponding requirements
 
 ### TESTING STRINGS
 + the testing of strings is analogue to the testing of integers, e.g.
@@ -266,4 +263,4 @@ if __name__ == "__main__":
 └── file.py
 ```
 + the \_\_init\_\_.py file is required to treat the directory containing the files as package
-+ the by typing pytest test in ther terminal, all test programs in the test folder are tested
++ by typing pytest test in the terminal, all test programs in the test folder are tested

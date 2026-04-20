@@ -11,10 +11,10 @@
 ```python
 print("hello world) # output: SyntaxError: unterminated string literal
 ```
-+ syntax erros can be fixed easily by the programmer
++ syntax erros can be fixed easily by fixing the code syntax
 
 ### RUNTIME ERROR
-+ arises while a code is running reuslting in a interruption of the code
++ arises while a code is running resulting in a interruption of the code
 + some common errors:
 
 | error | description |
@@ -33,7 +33,7 @@ try:
 except ValueError:
     print("x is not an integer") # output when an error occurs
 ```
-+ for the keyword statement, the errors should be known and you must be specific with the exceptions; for multiple error types multiple excepts are necessary
++ for the keyword except, the errors should be known and you must be specific with the exceptions; for multiple error types multiple excepts are necessary
 + for best practice, only the lines, which can fail, should be used in the try statement (it is more pythonic), e.g.
 ```python
 try:
@@ -43,7 +43,7 @@ except ValueError:
 
 print(f"x is {x}")
 ```
-+  however, in this example we will get an NameError, when no integer is in the input resulting that x is not assigned due to a ValueError
++  however, in this example we will get an NameError, when a string is in the input resulting that x is not assigned due to a ValueError
 +  therefore, the try and except statements can be combined with the else statement, e.g.
 ```python
 try:
@@ -53,7 +53,7 @@ except ValueError:
 else:
     print(f"x is {x}")
 ```
-+ Improving the code with a while True loop:
++ improving the code with a while True loop:
 ```python
 while True:
     try:
@@ -85,7 +85,7 @@ def get_int():
 
 main()
 ```
-+ further improvements:
++ further improvements
 ```python
 def main():
     x = get_int()
@@ -141,7 +141,7 @@ def get_int():
 
 main()
 ```  
-+ for a more reusable and dynamic code, the prompt is insert in the main(); therefore, get_int() can be used in other codes/programms
++ for a more reusable and dynamic code, the prompt is insert in the main(); therefore, get_int() can be used in other codes/programs
 ```python
 def main():
     x = get_int("What's x? ")
@@ -187,4 +187,4 @@ if x < 0:
   
     1\. set an breakpoint in a code line (red dot on the left side of code line number)  
     2\. start the debugger  
-    3. at the breakpoint the code is stopped and then you examine the every code line with the functions "continue" (go to the next breakpoint), "step over" (go to the next code line), "step into" (go into the function), and "step out" (leave a function)
+    3\. at the breakpoint the code is stopped and then you examine the every code line with the functions "continue" (go to the next breakpoint), "step over" (go to the next code line), "step into" (go into the function), and "step out" (leave a function)

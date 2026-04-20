@@ -7,13 +7,13 @@
 + inside a code comments can be made using "#" for e.g. documentation or to-dos
 
 ### FUNCTIONS
-+ commands performing actions - called **SIDE EFFECTS**; e.g. print()
++ commands performing actions(**SIDE EFFECTS**), e.g. print()
 ```python
 print() #prints input on the screen or display
 print("hello" + "world") #output: helloworld
 print("hello", "world") #output: hello world
 ```
-+ inside parantheses is the input - called **ARGUMENTS**
++ inside parantheses is the input (**ARGUMENTS**)
 
 + **CHECK ALWAYS THE FUNCTION DOCUMENTATION!!!**
 e.g. for print():
@@ -54,7 +54,7 @@ text = '''first line,
 second line,
 third line'''
 ```
-+ to use a quotation marks in a string, Escaping must can be used by backslash (\), e.g.
++ to use a quotation marks in a string, **Escaping** can be used by backslash (\), e.g.
 ```python
 name = "\"David\"" #output: "David"
 ```
@@ -101,10 +101,10 @@ def squared(x): #a function "squared" is defined with the parameter x
 ```         
 + parameters are optional (e.g. def squared():)
 + default values can be added to the parameters (e.g. def squared(x=3):)
-+ in general, parameters are only valid in the SCOPE of the def function.
++ in general, parameters inside the def are only valid in the **SCOPE** of the function
 + value returned by the function is called **RETURN VALUE**
-+ the RETURN VALUE is optional
-+ global variables can be changed inside a def function by use of the prefix "global", e.g.:
++ the return value is optional
++ global variables can be changed inside a def function by use of the prefix "global", e.g.
 ```python
 x = 2
 def multiple(y):
@@ -114,7 +114,7 @@ def multiple(y):
   result2 = y + x
   return result1, result2             
 ```           
-+ def must be defined before used in the code, therefore, one option is to work with a main code:
++ def must be defined before used in the code, therefore, one option is to work with a main code
 ```python
 def main(): #here the main code is written as def
   ....
@@ -128,10 +128,10 @@ main() #main code is executed
 ### COMMANDS IN THE TERMINAL
 | commands | description |
 | --- | --- |
-| code \<file.py> | create new code file\<file.py> |
+| code \<file.py> | create new code file \<file.py> |
 | ls | list of all files in the current directory |
 | cp \<file> \<dir> | copy file \<file> into the directroy \<dir> |
-| mv <file> \<dir> | move file <file> into the directroy \<dir> |
+| mv \<file> \<dir> | move file \<file> into the directroy \<dir> |
 | rm \<file> | delete file \<file> |
 | mkdir \<dir> | create new directory \<dir> |
 | cd | change to root directory |

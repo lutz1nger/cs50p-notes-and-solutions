@@ -20,7 +20,5 @@ def get_int(prompt):
             pass
         except ZeroDivisionError:
             pass
-        except NameError:
-            pass
 
 main()

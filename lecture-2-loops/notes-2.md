@@ -7,7 +7,7 @@
 + used for repeated actions
 
 ### WHILE LOOP
-+ while loop is executed while a condition is TRUE
++ while loop is executed while a condition is True
 ```python
 while condition:
 ```
@@ -33,7 +33,7 @@ while True:
 + while True: is a infinited loop
 + the keyword continue continues the loop
 + the keyword break stops the loop
-+ instead of break, return can be used as well; then the loop is stopped and a value is returned
++ instead of break, return can be used as well, then the loop is stopped and a value is returned
 ```python
 def main():
     meow(get_number())
@@ -72,14 +72,14 @@ for i in range(3):
     print("meow")
 ```
 + the stop value is exclusive, that means the range() functions counts only to stop-1, e.g. the output for range(3) is 0,1,2
-+ if a varibale has no significance in a code, a variable is represented by a underscore(_) -> it is more pythonic, e.g.
++ if a varibale has no significance in a code (e.g. only used ones) , a variable is represented by a underscore(_) -> it is more pythonic, e.g.
 ```python
 for _ in range(3):
     print("meow")
 ```
 
 ### LIST
-+ a list is a variable contaning mulitple values - called **ITEMS**
++ a list is a variable contaning mulitple values (**ITEMS**)
 + a list is represented by [], items are seperarted by , in a list
 ```python
 numbers = [0,1,2,3,4,5]
@@ -143,7 +143,7 @@ len(numbers) #output: 6
 ```
 
 ### DICT
-+ dictionary/dict is a strucutured variable with keys and assigned values
++ dictionary/dict is a structured variable with keys and assigned values
 + a key and an assigned value is a item, they are seperated by :
 + dict is represented by {}, items are seperarted by , in a dict
 ```python
@@ -185,7 +185,7 @@ numbers["one"] #output: 1
 {i: function(i) for i in list}
 {i: function(i) for i in list if condition}
 ```
-+ list and dict can be combined to structure data, e.g.
++ list and dict can be combined to structured data, e.g.
 ```python
 students = [
     {"name": "Hermione", "house": "Gryffindor", "patronus": "Otter"},
@@ -196,7 +196,7 @@ students = [
 ``` 
 
 ### None
-+ keyword indicating the absence of a value
++ keyword None indicating the absence of a value
 
 ### STRING SLICING 
 + analouge to list slicing
@@ -219,7 +219,7 @@ string[:-4] #output: py
 + a tuple is an **immutable** variable contaning mulitple items 
 + a tuple is represented by (), items are seperarted by , in a tuple
 + tuples have a smaller size compared to lists -> higher performance
-+ tuple can be unpacked:
++ tuple can be unpacked, e.g.
 ```python
 x,y = (i, j)
 
